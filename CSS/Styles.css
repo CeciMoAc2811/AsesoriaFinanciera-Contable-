@@ -1,0 +1,211 @@
+/* 2. VARIABLES CSS (:root): Aquí se define la paleta de colores corporativa */
+        :root {
+            --color-primario: #0B2545;       /* Azul Marino Profundo (Aporta rigor y estabilidad) */
+            --color-secundario: #134074;     /* Azul de soporte (Neutralidad y sofisticación) */
+            --color-fondo-body: #cccfd1;     /* Gris Platino (Fondo general de la pantalla) */
+            --color-lienzo: #FFFFFF;         /* Blanco puro (Para el lienzo centralizado de 1500px) */
+            --color-texto: #1D2A44;          /* Gris Oxford (Para máxima legibilidad en textos) */
+            --color-acento: #D4AF37;         /* Dorado / Oro sutil (Para destacar elementos de conversión) */
+            --color-acento-hover: #AA8B2C;   /* Dorado más oscuro para el efecto de pasar el mouse */
+            --fuente-corporativa: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ESTILOS GENERALES DEL CUERPO (BODY) */
+        body {
+            background-color: var(--color-fondo-body); /* Aplica el fondo gris platino */
+            color: var(--color-texto);                  /* Aplica el color de texto gris oxford */
+            font-family: var(--fuente-corporativa);     /* Tipografía limpia y profesional */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor maestro que encierra toda la landing page */
+        .master-container {
+            max-width: 1500px;    /* Ancho máximo estricto según la guía */
+            margin: 0 auto;       /* Centra el contenedor horizontalmente en la pantalla */
+            background-color: var(--color-lienzo); /* Fondo blanco para contrastar con el body */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.08); /* Sombra suave para darle relieve al lienzo */
+        }
+
+        /* PERSONALIZACIÓN DE LA BARRA DE NAVEGACIÓN (NAVBAR) */
+        .navbar {
+            background-color: var(--color-primario) !important; /* Color azul marino de fondo */
+            border-bottom: 3px solid var(--color-acento);       /* Línea dorada inferior estética */
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important; /* Texto blanco para los enlaces del menú */
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            color: var(--color-acento) !important; /* Cambia a dorado cuando el usuario pasa el mouse */
+        }
+
+        /* ESTILOS PARA LAS SECCIONES INTERNAS */
+        section {
+            padding: 80px 20px;              /* Espaciado interno vertical para que el diseño respire */
+            scroll-margin-top: 70px;         /* 3. Evita que la barra fija tape los títulos al usar anclas */
+        }
+        .section-title {
+            color: var(--color-primario);    /* Títulos en azul marino */
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;        /* Convierte los títulos a mayúsculas */
+            font-size: 1.8rem;
+        }
+        /* Línea decorativa dorada debajo de cada título de sección */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-acento);
+            margin-top: 10px;
+        }
+
+        /* hero (Sección de Bienvenida/Inicio con CTA) */
+        #inicio {
+            /* Creamos un degradado corporativo elegante sobre un patrón de cuadrícula financiera abstracta */
+            background: linear-gradient(135deg, rgba(11, 37, 69, 0.60) 40%, rgba(19, 64, 116, 0.60)), 
+                        url('file:///C:/Users/USER/OneDrive/Desktop/Programacion%20para%20internet/Examen%20I/Imag/imgPrinci%20(convert.io).webp');
+           background-size: cover;  /* Hace que la imagen cubra todo el ancho y alto del bloque */
+           background-position: center;  /* Centra la foto para que no se corte de forma extraña */
+           background-repeat: no-repeat; /* Evita que la foto se duplique en pantallas grandes */
+           color: #ffffff;    /* Mantiene los textos en color blanco puro */
+           padding: 140px 20px; /* Espaciado interno para darle altura a la sección */
+           text-align: center;
+        }
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: #E0E6ED;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Botón de Llamada a la Acción (CTA) */
+        .btn-cta {
+            background-color: var(--color-acento);
+            color: var(--color-primario) !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;/* Transición suave para la animación */
+        }
+        .btn-cta:hover {
+            background-color: var(--color-acento-hover);
+            transform: scale(1.03); /* Se agranda un 3% sutilmente al pasar el mouse */
+        }
+
+        /* SECCION SOBRE NOSOTROS */
+        #nosotros {
+            background-color:var(--color-fondo-body);  /* Fondo ligeramente grisáceo para diferenciar secciones */
+        }
+
+        /*catálogo de servicios */
+        .services-wrapper {
+            display: flex;    /* Activa el modelo Flexbox */
+            flex-wrap: wrap;  /* Permite que las tarjetas bajen a la siguiente fila en móviles */
+            gap: 24px;        /* Espaciado entre tarjetas */
+            justify-content: center; /* Centra las tarjetas en el contenedor */
+            background-color: #FFFFFF;
+        }
+        
+        /*efectos y tamaño de las targetas*/
+        .service-card {
+            background: var(--color-fondo-body);
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            padding: 30px;
+            /* Ocupa el 25% del ancho en pantallas grandes (4 en fila) menos el espacio del gap */
+            flex: 1 1 calc(25% - 24px); 
+            min-width: 260px;/* En móviles más pequeños pasa automáticamente a modo columna (d-flex flex-wrap) */
+            height: 420px;/* Alto */
+            display: flex;/* Flexbox interno para alinear los elementos de la tarjeta */
+            flex-direction: column;/* Organiza los elementos de arriba a abajo */
+            justify-content: space-between; /* Distribuye el espacio para mantener alineación horizontal perfecta */
+            text-align: center;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease; /* Transición suave para el hover */
+        }
+        
+        /*Efecto hover con transición suave de elevación y sombra proyectada */
+        .service-card:hover {
+            transform: translateY(-10px);
+            filter: drop-shadow(0 15px 20px rgba(11, 37, 69, 0.15));
+            border-color: var(--color-acento); /* El borde cambia a dorado para interactividad */
+        }
+
+        /* CONTENEDOR DE IMÁGENES / ÍCONOS */
+        .image-container {
+            height: 80px;                    /* ALTO FIJO del contenedor de la imagen */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;             /* Centra verticalmente el icono */
+            justify-content: center;          /* Centra horizontalmente el icono */
+        }
+        .image-container img, .image-container svg {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;            
+        }
+
+        /* Titulos de las tarjetas alineados milimétricamente */
+        .card-title {
+            color: var(--color-primario);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            min-height: 50px;  /* Altura minima para que los textos queden perfectamente alineados en la misma línea */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-text {
+            font-size: 0.95rem;
+            color: #556575;
+            flex-grow: 1;/* Empuja el texto para ocupar el espacio restante  */
+        }
+
+        /* SECCION DE TESTIMONIOS */
+        #testimonios {
+            background-color: #F4F7FA;
+        }
+        .carousel-item {
+            padding: 20px 40px;
+        }
+        .testimonial-text {
+            font-style: italic;              /* Texto en cursiva para testimonios */
+            font-size: 1.1rem;
+            color: var(--color-primario);
+        }
+
+        /* SECCION DE CONTACTO (FORMULARIO) */
+        #contacto {
+            background-color: var(--color-fondo-body);
+        }
+        .form-control, .form-select {
+            border: 1px solid #CBD5E1;
+            padding: 12px;
+        }
+        /* Efecto visual  */
+        .form-control:focus, .form-select:focus {
+            border-color: var(--color-primario);
+            box-shadow: 0 0 0 3px rgba(11, 37, 69, 0.15);
+        }
+
+        /* PIE DE PAGINA (FOOTER) */
+        footer {
+            background-color: var(--color-primario);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--color-acento); /* Linea dorada superior */
+        }
+

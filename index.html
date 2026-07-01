@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesores Financieros & Contables</title>
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Styles.css">
+    </head>
+    <body>
+
+        <div class="master-container">
+
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <!-- Permite que el menú se estire a los lados -->
+            <div class="container-fluid px-4">
+                
+                <!-- Es el logotipo/nombre de la firma en el menú izquierdo -->
+                <a class="navbar-brand d-flex align-items-center" href="#inicio">
+
+                    <!-- Ícono gráfico dinámico integrado directamente en código SVG vectorial -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-graph-up-arrow me-2" 
+                    viewBox="0 0 16 16" style="color: var(--color-acento);">
+                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.707l-5.323 5.323a.5.5 0 0 1-.708 0L6 8.207l-4 4a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0L8 8.793l4.793-4.793H10.5a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    Asesores Financieros & Contables
+                </a>
+                
+                <!-- Controla que aparezca el menú desplegable en celulares  -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                     aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Contenedor que agrupa los enlaces del menú y se esconde en móviles -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- [COMENTARIO HTML]: LISTA DESORDENADA (UL) - Estructura limpia para organizar los elementos de navegación -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Enlaces de tipo ANCLA (href="#id") para navegar internamente en la misma página -->
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre la Firma</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!--Seccion Hero/Bienvenida  -->
+        <header id="inicio">
+            <!-- Contenedor para centrar y estructurar los textos internos -->
+            <div class="container py-5">
+                <!-- Titulo impactante con eslogan requerido en el punto 3 -->
+                <h1 class="hero-title">PRECISIÓN NUMÉRICA Y RESPALDO FISCAL PARA SU EMPRESA</h1>
+                <!-- Párrafo de enganche o propuesta de valor (Tagline) -->
+                <p class="hero-tagline">Evite multas y delegue la contabilidad en manos de expertos. Soluciones financieras estratégicas diseñadas exclusivamente para MiPyMEs y Directores de Negocios.</p>
+                <!-- Botón de conversión principal  -->
+                <a href="#contacto" class="btn btn-cta">Solicitar Diagnóstico Fiscal</a>
+            </div>
+        </header>
+
+        <!--Etiqueta  principal que envuelve todo el contenido  -->
+        <main>
+            
+            <!--Bloque informativo sobre la marca, historia y directores con ID único -->
+            <section id="nosotros">
+                <div class="container">
+                    <!-- Sistema de rejillas (Row) para poner texto a un lado y multimedia al otro -->
+                    <div class="row align-items-center">
+                        
+                        <!-- Columna de texto (Ocupa la mitad del espacio en pantallas medianas/grandes) -->
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h2 class="section-title">Sobre la Firma</h2>
+                            <p class="lead">Fundada por el Lic. Alejandro Sandoval junto a especialistas en auditoría y gestión laboral, aportamos formalidad y credibilidad digital a su negocio.</p>
+                            <p>Entendemos el mercado corporativo actual. Brindamos transparencia absoluta, reportes exactos y contamos con certificaciones vigentes ante los entes reguladores de ingresos y aduanas para garantizar una protección legal de su patrimonio.</p>
+                        </div>
+                        
+                        <!-- Columna multimedia (Ocupa la otra mitad del espacio disponible) -->
+                        <div class="col-md-6 text-center">
+                             <img src="Imag/nosotros (convert.io).webp" viewBox="0 0 400 300" width="400" height="300" style="background:#0B2545; border-radius:8px;" loading="lazy">
+                                <rect width="400" height="300" fill="#0B2545"/>
+                                <line x1="100" y1="180" x2="300" y2="180" stroke="#D4AF37" stroke-width="4"/>
+                            </img>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulo para el catálogo interactivo de la firma -->
+            <section id="servicios">
+                <div class="container">
+                    <!-- Títulos centrados que introducen el catálogo simétrico -->
+                    <h2 class="section-title text-center mx-auto">Catálogo de Servicios</h2>
+                    <p class="text-center text-muted mb-5">Simetría, orden y precisión métrica estructural para el control operativo de su entidad.</p>
+                    
+                    <!-- Contenedor maestro con lógica para las 4 tarjetas -->
+                    <div class="services-wrapper">
+                        
+                        <!-- Elemento de bloque independiente para un servicio -->
+                        <article class="service-card">
+                            <!-- Div con alto fijo para confinar la imagen/ícono vectorizado con object-fit -->
+                            <div class="image-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16" style="color: var(--color-primario) !important;">
+                                    <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v1h6V3zm0 3.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </div>
+                            <!-- Título alineado horizontalmente  -->
+                            <h3 class="card-title">Contabilidad Mensual</h3>
+                            <p class="card-text">Registro y estructuración sistemática de sus movimientos comerciales para estados financieros claros.</p>
+                        </article>
+
+                        <!-- Bloque de servicio para Auditorías -->
+                        <article class="service-card">
+                            <div class="image-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16" style="color: var(--color-primario) !important;">
+                                    <path d="M5.338 1.59a61 61 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .74 0q.115-.033.292-.118c.242-.113.548-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM7.857 0a11.3 11.3 0 0 0 2.978.53c1.07.289 2.187.616 2.855.835a1 1 0 0 1 .684.815c.596 4.477-.78 7.623-2.474 9.831a11.7 11.7 0 0 1-2.514 2.456 11 11 0 0 1-1.022.61c-.215.112-.43.216-.635.295a1 1 0 0 1-.726 0c-.205-.079-.42-.183-.635-.295a11 11 0 0 1-1.022-.61 11.7 11.7 0 0 1-2.514-2.456C1.117 10.271-.26 7.125.337 2.648a1 1 0 0 1 .684-.815c.668-.219 1.784-.546 2.855-.836A11.3 11.3 0 0 0 7.857 0"/>
+                                    <path d="M10.854 5.854a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Auditoría de Estados Financieros</h3>
+                            <p class="card-text">Verificación y validación estricta de sus balances para asegurar transparencia ante inversionistas externos.</p>
+                        </article>
+
+                        <!-- Bloque de servicio para Impuestos -->
+                        <article class="service-card">
+                            <div class="image-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: var(--color-primario) !important;">
+                                    <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Declaración de Impuestos</h3>
+                            <p class="card-text">Presentación precisa y puntual de sus obligaciones fiscales para mitigar riesgos fiscales y multas severas.</p>
+                        </article>
+
+                        <!-- Bloque de servicio para Gestión Laboral/Planillas -->
+                        <article class="service-card">
+                            <div class="image-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16" style="color: var(--color-primario) !important;">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724C2.312 10.629 3.282 10 5 10q.413 0 .824.045l-.024.196-.005.054a.345.345 0 0 0 .125.292M6 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0m1-1a3 3 0 1 0-6 0 3 3 0 0 0 6 0"/>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Consultoría Laboral / Planillas</h3>
+                            <p class="card-text">Cálculo exacto de retenciones, salarios y contratos de empleados de acuerdo con la legislación actual vigente.</p>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bloque interactivo estructurado con el carrusel nativo de Bootstrap -->
+            <section id="testimonios">
+                <div class="container text-center">
+                    <h2 class="section-title mx-auto">Testimonios de Clientes</h2>
+                    
+                    <!-- Contenedor maestro del carrusel con temporizador de deslizamiento automático (data-bs-ride) -->
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Envoltorio de los ítems deslizables -->
+                        <div class="carousel-inner" style="max-width: 700px; margin: 0 auto;">
+                            
+                            <!-- Ítem de carrusel testimonio 1 -->
+                            <div class="carousel-item active">
+                                <p class="testimonial-text">"La firma del Lic. Sandoval organizó por completo nuestra contabilidad mensual. Pasamos de constantes advertencias a una tranquilidad operativa inigualable."</p>
+                                <h5 class="mt-3 fw-bold">- Ing. Roberto Mendoza, Gerente de TechSolutions</h5>
+                            </div>
+                            
+                            <!-- Ítem de carrusel Testimonio 2 -->
+                            <div class="carousel-item">
+                                <p class="testimonial-text">"Excelente servicio en la auditoría de estados financieros. Su precisión numérica y rigurosidad nos permitieron asegurar un nuevo socio de inversión corporativa."</p>
+                                <h5 class="mt-3 fw-bold">- Lic. Elena Fuentes, Directora General de Distribuidora Norte</h5>
+                            </div>
+
+                        </div>
+                        
+                        <!-- Flechas laterales interactivas para cambiar de testimonio manualmente -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Sección  formulario  -->
+            <section id="contacto">
+                <div class="container" style="max-width: 700px;">
+                    <h2 class="section-title text-center mx-auto">Formulario de Cotización</h2>
+                    <p class="text-center text-muted mb-4">Complete sus requerimientos institucionales para recibir una propuesta formal de servicios.</p>
+                    
+                    <!--Etiqueta de formulario HTML enlazada al ID controlado por JavaScript -->
+                    <form id="whatsappForm" class="row g-3">
+                        
+                        <!-- Entrada de texto para la empresa -->
+                        <div class="col-md-12">
+                            <label for="empresa" class="form-label fw-bold">Nombre de la Empresa</label>
+                            <input type="text" class="form-control" id="empresa" placeholder="Ej. MiPyME S.A." required>
+                        </div>
+                        
+                        <!--Entrada de texto para el nombre del solicitante -->
+                        <div class="col-md-12">
+                            <label for="contacto_nombre" class="form-label">Nombre del Solicitante</label>
+                            <input type="text" class="form-control" id="contacto_nombre" placeholder="Ej. Lic. Alejandro Sandoval" required>
+                        </div>
+                        
+                        <!--Menú desplegable selectivo de servicios institucionales -->
+                        <div class="col-md-12">
+                            <label for="servicio_select" class="form-label">Servicio Requerido</label>
+                            <select id="servicio_select" class="form-select" required>
+                                <option value="" selected disabled>Seleccione una opción...</option>
+                                <option value="Contabilidad Mensual">Contabilidad Mensual</option>
+                                <option value="Auditoría de Estados Financieros">Auditoría de Estados Financieros</option>
+                                <option value="Declaración de Impuestos">Declaración de Impuestos</option>
+                                <option value="Consultoría Laboral / Planillas">Consultoría Laboral / Planillas</option>
+                            </select>
+                        </div>
+                        
+                        <!--  Área de texto multilínea para comentarios -->
+                        <div class="col-md-12">
+                            <label for="mensaje" class="form-label">Detalles o Comentarios Extras</label>
+                            <textarea class="form-control" id="mensaje" rows="4" placeholder="Describa brevemente el estado o rubro de su organización..."></textarea>
+                        </div>
+                        
+                        <!-- Botón  -->
+                        <div class="col-12 text-center mt-4">
+                            <button type="submit" class="btn btn-cta w-100">Enviar Solicitud vía WhatsApp</button>
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <div class="container">
+                <p class="mb-1"> 2026 Asesores Financieros & Contables. 
+                    Todos los derechos reservados.</p>
+                <p class="mb-1">Examen Primer Parcial |
+                     Programación Para Internet I (ISC-815) | Cuenta: 118560001</p>
+            </div>
+        </footer>
+
+        <!-- LIBRERÍA DE LOGICA JAVASCRIPT DE BOOTSTRAP PARA PODER ENVIAR AL WHATSAPP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script personalizado para redireccionar el formulario al WhatsApp del estudiante -->
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Cancela el comportamiento nativo de refrescar la pantalla
+            
+            // Número de cuenta de estudiante configurado para simular el envío
+            const numeroEstudiante = "50492253620"; 
+
+            // Lectura y captura de los valores ingresados en el HTML por medio del DOM
+            const empresa = document.getElementById('empresa').value;
+            const nombre = document.getElementById('contacto_nombre').value;
+            const servicio = document.getElementById('servicio_select').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Formateo estricto de los datos simulando una cotización profesional codificada para URL
+            const textoMensaje = `*SOLICITUD DE COTIZACIÓN*%0A%0A` +
+                                 `*Empresa:* ${empresa}%0A` +
+                                 `*Contacto:* ${nombre}%0A` +
+                                 `*Servicio:* ${servicio}%0A` +
+                                 `*Detalles:* ${mensaje}`;
+
+            // Dirección de la API oficial de WhatsApp para abrir chats dinámicos
+            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroEstudiante}&text=${textoMensaje}`;
+
+            // Abre el chat estructurado en una pestaña independiente del navegador
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+    </body>
+
+</html>
